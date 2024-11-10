@@ -1,4 +1,8 @@
+using InventoryCRUDApp.Infrastructure.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer("name=LocalConnection"));
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -13,8 +17,11 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
 
 app.UseRouting();
 
