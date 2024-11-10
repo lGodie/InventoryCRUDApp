@@ -1,0 +1,30 @@
+﻿@page "{id:int}"
+@model DetailsModel
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+@if (Model.NotFound)
+{
+    <div class="alert alert-warning">
+        The product was not found.
+    </div>
+}
+else if (Model.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @Model.ErrorMessage
+    </div>
+}
+else
+{
+    <div>
+        <h3>@Model.Product.Name</h3>
+        <p>Price: @Model.Product.Price</p>
+        <p>Description: @Model.Product.Description</p>
+    </div>
+}
+
+<a asp-page="Index" class="btn btn-secondary">Back to List</a>

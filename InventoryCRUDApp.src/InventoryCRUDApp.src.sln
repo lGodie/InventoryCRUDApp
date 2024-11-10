@@ -5,13 +5,15 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryCRUDApp.src", "InventoryCRUDApp.src.csproj", "{3F678A0A-1AAB-42CB-BC3F-BAFD20109044}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryCRUDApp.Application", "..\InventoryCRUDApp.Application\InventoryCRUDApp.Application.csproj", "{1DE674EA-FD2F-492E-B5C3-7BBE645EF3DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryCRUDApp.Application", "..\InventoryCRUDApp.Application\InventoryCRUDApp.Application.csproj", "{1DE674EA-FD2F-492E-B5C3-7BBE645EF3DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryCRUDApp.Domain", "..\InventoryCRUDApp.Domain\InventoryCRUDApp.Domain.csproj", "{C8B4146E-236E-4E0A-B5CC-9ABDBFE3A28B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryCRUDApp.Domain", "..\InventoryCRUDApp.Domain\InventoryCRUDApp.Domain.csproj", "{C8B4146E-236E-4E0A-B5CC-9ABDBFE3A28B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryCRUDApp.Infrastructure", "..\InventoryCRUDApp.Infrastructure\InventoryCRUDApp.Infrastructure.csproj", "{B861D627-75C7-4637-B53C-DA4F47C3C584}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryCRUDApp.Infrastructure", "..\InventoryCRUDApp.Infrastructure\InventoryCRUDApp.Infrastructure.csproj", "{B861D627-75C7-4637-B53C-DA4F47C3C584}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryCRUDApp.Shared", "..\InventoryCRUDApp.Shared\InventoryCRUDApp.Shared.csproj", "{F9850DFB-DCAD-4AFE-9E0D-5A88C180CAD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryCRUDApp.Shared", "..\InventoryCRUDApp.Shared\InventoryCRUDApp.Shared.csproj", "{F9850DFB-DCAD-4AFE-9E0D-5A88C180CAD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryCRUDApp.Frontend", "..\InventoryCRUDApp.Frontend\InventoryCRUDApp.Frontend.csproj", "{65CD80AF-318B-43BF-A01F-71B2C5D346AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F9850DFB-DCAD-4AFE-9E0D-5A88C180CAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9850DFB-DCAD-4AFE-9E0D-5A88C180CAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9850DFB-DCAD-4AFE-9E0D-5A88C180CAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65CD80AF-318B-43BF-A01F-71B2C5D346AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65CD80AF-318B-43BF-A01F-71B2C5D346AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65CD80AF-318B-43BF-A01F-71B2C5D346AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65CD80AF-318B-43BF-A01F-71B2C5D346AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

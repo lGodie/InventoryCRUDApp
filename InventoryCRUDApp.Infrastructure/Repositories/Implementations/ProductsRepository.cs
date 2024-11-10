@@ -32,7 +32,8 @@ namespace InventoryCRUDApp.Infrastructure.Repositories.Implementations
 
         public async Task<Product> GetProductAsync(int id)
         {
-            ProductEntity productEntity = await _context.Set<ProductEntity>().FindAsync(id);
+            ProductEntity productEntity = await _context.Set<ProductEntity>().AsNoTracking()
+                .FirstOrDefaultAsync(p => p.Id == id); ;
             Product productDto = _mapper.Map<Product>(productEntity);
             return productDto;
 
@@ -47,9 +48,12 @@ namespace InventoryCRUDApp.Infrastructure.Repositories.Implementations
         public async Task DeleteAsync(Product product)
         {
             ProductEntity productEntity = _mapper.Map<ProductEntity>(product);
+            _context.Set<ProductEntity>().Attach(productEntity);
+
             _context.Set<ProductEntity>().Remove(productEntity);
             await _context.SaveChangesAsync();
-        }
+        }  
+
         public async Task UpdateAsync(Product product)
         {
             ProductEntity productEntity = _mapper.Map<ProductEntity>(product);

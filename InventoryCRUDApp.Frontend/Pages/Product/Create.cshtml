@@ -1,0 +1,40 @@
+﻿@page
+@model CreateModel
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<h2 class="mb-4">Create Product</h2>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> @Model.ErrorMessage
+    </div>
+}
+
+<form method="post">
+    <div class="mb-3">
+        <label for="ProductName" class="form-label">Name</label>
+        <input id="ProductName" asp-for="Product.Name" class="form-control" />
+        <span asp-validation-for="Product.Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="ProductPrice" class="form-label">Price</label>
+        <input id="ProductPrice" asp-for="Product.Price" class="form-control" />
+        <span asp-validation-for="Product.Price" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="ProductDescription" class="form-label">Description</label>
+        <textarea id="ProductDescription" asp-for="Product.Description" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Product.Description" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+<div class="mt-3">
+    <a asp-page="Index" class="btn btn-secondary">Back to Product List</a>
+</div>

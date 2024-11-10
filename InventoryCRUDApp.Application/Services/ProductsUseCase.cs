@@ -56,6 +56,7 @@ namespace InventoryCRUDApp.Application.Services
             await _productRepository.DeleteAsync(product);
         }
 
+
     }
 
 }

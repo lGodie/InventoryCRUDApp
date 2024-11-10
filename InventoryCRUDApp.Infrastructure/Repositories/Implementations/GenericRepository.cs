@@ -1,4 +1,5 @@
 ﻿using InventoryCRUDApp.Infrastructure.Persistence.Context;
+using InventoryCRUDApp.Infrastructure.Repositories.Interfaces;
 using InventoryCRUDApp.Shared.Responses;
 using Microsoft.EntityFrameworkCore;
 using System;

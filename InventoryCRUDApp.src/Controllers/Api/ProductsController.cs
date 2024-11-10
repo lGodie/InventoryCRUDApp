@@ -36,14 +36,14 @@ namespace InventoryCRUDApp.src.Controllers.Api
             var products = await _productService.GetProductsAsync();
             return Ok(products);
         }
-        [HttpPost]
-        public async Task<IActionResult> UpdateProducts([FromQuery] int id)
+        [HttpPost("Update/{id}")]
+        public async Task<IActionResult> UpdateProducts( int id)
         {
             await _productService.UpdateProductAsync(id);
             return Ok();
         }
-        [HttpPost("Delete")]
-        public async Task<IActionResult> DeleteProducts([FromQuery] int id)
+        [HttpPost("Delete/{id}")]
+        public async Task<IActionResult> DeleteProducts(int id)
         {
             await _productService.DeleteProductAsync(id);
             return Ok();
